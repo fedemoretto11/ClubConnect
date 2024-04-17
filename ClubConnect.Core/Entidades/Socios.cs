@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace ClubConnect.Core.Entidades
 {
-    internal class Socios
+    public class Socios
     {
 
-		private int dni { get; set; }
-		private string nombre { get; set; }
-		private string apellido { get; set; }
-		private DateTime fechaDeNacimiento { get; set; }
-		private string direccion { get; set; }
-		private string email { get; set; }
-		private string telefono { get; set; }
-		private DateTime fechaDeRegistro { get; set; }
-		private bool estaActivo { get; set; }
+		public int dni { get; set; }
+		public string nombre { get; set; }
+		public string apellido { get; set; }
+		public DateTime fechaDeNacimiento { get; set; }
+		public string direccion { get; set; }
+		public string email { get; set; }
+		public string telefono { get; set; }
+		public DateTime fechaDeRegistro { get; set; }
+		public bool estaActivo { get; set; }
 
 		//Contructores
 		public Socios()
