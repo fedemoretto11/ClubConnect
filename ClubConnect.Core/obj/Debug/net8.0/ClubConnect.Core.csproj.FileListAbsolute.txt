@@ -1,0 +1,12 @@
+D:\Programacion\Proyectos\ClubConnect\ClubConnect.Core\bin\Debug\net8.0\ClubConnect.Core.deps.json
+D:\Programacion\Proyectos\ClubConnect\ClubConnect.Core\bin\Debug\net8.0\ClubConnect.Core.dll
+D:\Programacion\Proyectos\ClubConnect\ClubConnect.Core\bin\Debug\net8.0\ClubConnect.Core.pdb
+D:\Programacion\Proyectos\ClubConnect\ClubConnect.Core\obj\Debug\net8.0\ClubConnect.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programacion\Proyectos\ClubConnect\ClubConnect.Core\obj\Debug\net8.0\ClubConnect.Core.AssemblyInfoInputs.cache
+D:\Programacion\Proyectos\ClubConnect\ClubConnect.Core\obj\Debug\net8.0\ClubConnect.Core.AssemblyInfo.cs
+D:\Programacion\Proyectos\ClubConnect\ClubConnect.Core\obj\Debug\net8.0\ClubConnect.Core.csproj.CoreCompileInputs.cache
+D:\Programacion\Proyectos\ClubConnect\ClubConnect.Core\obj\Debug\net8.0\ClubConnect.Core.sourcelink.json
+D:\Programacion\Proyectos\ClubConnect\ClubConnect.Core\obj\Debug\net8.0\ClubConnect.Core.dll
+D:\Programacion\Proyectos\ClubConnect\ClubConnect.Core\obj\Debug\net8.0\refint\ClubConnect.Core.dll
+D:\Programacion\Proyectos\ClubConnect\ClubConnect.Core\obj\Debug\net8.0\ClubConnect.Core.pdb
+D:\Programacion\Proyectos\ClubConnect\ClubConnect.Core\obj\Debug\net8.0\ref\ClubConnect.Core.dll

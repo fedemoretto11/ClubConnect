@@ -17,7 +17,7 @@ namespace ClubConnect.Core.Entidades
 		public string email { get; set; }
 		public string telefono { get; set; }
 		public DateTime fechaDeRegistro { get; set; }
-		public bool estaActivo { get; set; }
+		public int estaActivo { get; set; }
 
 		//Contructores
 		public Socios()
@@ -35,7 +35,7 @@ namespace ClubConnect.Core.Entidades
 			this.email = email;
 			this.telefono = telefono;
 			fechaDeRegistro = DateTime.Now;
-			this.estaActivo = true;
+			this.estaActivo = 1;
 
 		}
 

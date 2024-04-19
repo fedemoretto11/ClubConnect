@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubConnect.Core", "ClubConnect.Core\ClubConnect.Core.csproj", "{65BAA5FD-E19A-45A4-A911-E3A15769B444}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClubConnect.Core", "ClubConnect.Core\ClubConnect.Core.csproj", "{65BAA5FD-E19A-45A4-A911-E3A15769B444}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubConnect.Data", "ClubConnect.Data\ClubConnect.Data.csproj", "{67728313-1778-4108-837F-F30206A64349}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClubConnect.Data", "ClubConnect.Data\ClubConnect.Data.csproj", "{67728313-1778-4108-837F-F30206A64349}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubConnect.Services", "ClubConnect.Services\ClubConnect.Services.csproj", "{C69A3767-16AC-4A66-B593-DF0A6EB1EF0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClubConnect.Services", "ClubConnect.Services\ClubConnect.Services.csproj", "{C69A3767-16AC-4A66-B593-DF0A6EB1EF0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubConnect.Web", "ClubConnect.Web\ClubConnect.Web.csproj", "{38AD27F1-FD56-4C92-80E7-06EFF4C6205B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubConnect.Api", "ClubConnect.Api\ClubConnect.Api.csproj", "{FC2CA275-8561-4E4C-AC4D-1CF9D8A176D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{C69A3767-16AC-4A66-B593-DF0A6EB1EF0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C69A3767-16AC-4A66-B593-DF0A6EB1EF0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C69A3767-16AC-4A66-B593-DF0A6EB1EF0F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38AD27F1-FD56-4C92-80E7-06EFF4C6205B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38AD27F1-FD56-4C92-80E7-06EFF4C6205B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38AD27F1-FD56-4C92-80E7-06EFF4C6205B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38AD27F1-FD56-4C92-80E7-06EFF4C6205B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC2CA275-8561-4E4C-AC4D-1CF9D8A176D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC2CA275-8561-4E4C-AC4D-1CF9D8A176D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC2CA275-8561-4E4C-AC4D-1CF9D8A176D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC2CA275-8561-4E4C-AC4D-1CF9D8A176D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
