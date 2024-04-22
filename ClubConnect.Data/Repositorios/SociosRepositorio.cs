@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using ClubConnect.Core.Entidades;
@@ -39,7 +40,7 @@ namespace ClubConnect.Data.Repositorios
 				socio.dni,
 				socio.nombre,
 				socio.apellido,
-				socio.fechaDeNacimiento,
+				socio.fechaDeNacimiento, 
 				socio.direccion,
 				socio.email,
 				socio.telefono,
@@ -49,9 +50,25 @@ namespace ClubConnect.Data.Repositorios
 			return result > 0;
 		}
 
-		public Task<bool> DarDeAltaBajaSocio(Socios socio)
+		public async Task<bool> DarDeAltaBajaSocio(int dni)
 		{
-			throw new NotImplementedException();
+			var db = dbConexion();
+			string sqlString;
+
+			Socios socio = await ObtenerUnSocio(dni);
+
+			if (socio.estaActivo == 0)
+			{
+				sqlString = @"UPDATE socios SET esta_activo = 1 WHERE DNI = @Dni";
+			}
+			else
+			{
+				sqlString = @"UPDATE socios SET esta_activo = 0 WHERE DNI = @Dni";
+			}
+
+			var result = await db.ExecuteAsync(sqlString, new { dni });
+			return result > 0;
+
 		}
 
 		public async Task<IEnumerable<Socios>> ObtenerTodosLosSocios()
@@ -67,9 +84,9 @@ namespace ClubConnect.Data.Repositorios
 		{
 			var db = dbConexion();
 
-			var sqlString = @"SELECT * FROM socios WHERE dni = @Dni";
+			var sqlString = @"SELECT * FROM socios WHERE DNI = @dni";
 
-			return await db.QueryFirstOrDefaultAsync<Socios>(sqlString, new { Dni = dni });
+			return await db.QueryFirstOrDefaultAsync<Socios>(sqlString, new { dni });
 		}
 	}
 }

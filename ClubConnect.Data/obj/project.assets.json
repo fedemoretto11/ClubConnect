@@ -745,16 +745,6 @@
         "runtime": {
           "lib/net7.0/ZstdSharp.dll": {}
         }
-      },
-      "ClubConnect.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "compile": {
-          "bin/placeholder/ClubConnect.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ClubConnect.Core.dll": {}
-        }
       }
     }
   },
@@ -2371,16 +2361,10 @@
         "zstdsharp.port.0.7.1.nupkg.sha512",
         "zstdsharp.port.nuspec"
       ]
-    },
-    "ClubConnect.Core/1.0.0": {
-      "type": "project",
-      "path": "../ClubConnect.Core/ClubConnect.Core.csproj",
-      "msbuildProject": "../ClubConnect.Core/ClubConnect.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "ClubConnect.Core >= 1.0.0",
       "Dapper >= 2.1.35",
       "Microsoft.EntityFrameworkCore >= 8.0.4",
       "MySql.Data >= 8.3.0"
@@ -2412,11 +2396,7 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {
-            "D:\\Programacion\\Proyectos\\ClubConnect\\ClubConnect.Core\\ClubConnect.Core.csproj": {
-              "projectPath": "D:\\Programacion\\Proyectos\\ClubConnect\\ClubConnect.Core\\ClubConnect.Core.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

@@ -13,6 +13,6 @@ namespace ClubConnect.Data.Repositorios
 		Task<Socios> ObtenerUnSocio(int dni);
 		Task<bool> AgregarSocio(Socios socio);
 		Task<bool> ActualizarSocio(Socios socio);
-		Task<bool> DarDeAltaBajaSocio(Socios socio);
+		Task<bool> DarDeAltaBajaSocio(int socio);
 	}
 }
