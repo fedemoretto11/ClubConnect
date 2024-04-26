@@ -35,7 +35,10 @@ namespace ClubConnect.Core.Entidades
 
 		#endregion
 
-		public Socio() { }
+		public Socio() {
+			this.fechaDeRegistro = DateTime.Today.Date;
+			this.estaActivo = true;
+		}
 
 		#region Propiedades Publicas
 		public int Dni
@@ -83,17 +86,27 @@ namespace ClubConnect.Core.Entidades
 		public DateTime FechaDeRegistro
 		{
 			get { return this.fechaDeRegistro; }
-			set { this.fechaDeRegistro = value; }
 		}
 
 		public bool EstaActivo
 		{
 			get { return this.estaActivo; }
-			set { this.estaActivo = value; }
 		}
 
 
 		#endregion
-		
+
+		#region Metodos
+		public void DarDeBaja()
+		{
+			this.estaActivo = false;
+		}
+
+		public void DarDeAlta()
+		{
+			this.estaActivo = true;
+		}
+		#endregion
+
 	}
 }
