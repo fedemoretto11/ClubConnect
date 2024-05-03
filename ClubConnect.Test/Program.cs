@@ -1,18 +1,29 @@
-﻿using ClubConnect.Core.Entidades;
+﻿using ClubConnect.Api.Models.Entidades;
+using ClubConnect.Api.Models.Servicios;
+using static ClubConnect.Api.Models.Enum.Enum;
 
-Socio socio = new Socio();
-Socio socio2 = new();
-socio.Nombre = "Federico";
-socio.Apellido = "Moretto";
-socio.Direccion = "Hipolito Irigoyen 146";
-socio.Telefono = "(02268) 15510595";
-socio.Email = "fedemoretto94@gmail.com";
-socio.Dni = 38437001;
+SocioServicio socioServicio = new();
 
-Console.WriteLine("Id: " + socio.id);
-Console.WriteLine("DNI: " + socio.Dni);
-Console.WriteLine("Nombre: " + socio.Nombre);
-Console.WriteLine("Apellido: " + socio.Apellido);
-Console.WriteLine("Direccion: " + socio.Direccion);
-Console.WriteLine("Telefono: " + socio.Telefono);
-Console.WriteLine("Email: " + socio.Email);
+// Llamada exitosa
+Socio socio1 = socioServicio.CrearSocio(38437001, "Federico", "Moretto", "H Irigoyen 146", "(02268) 15510595", "fedemoretto94@gmail.com", CategoriaSocio.ACTIVO_PLENO, new DateTime(1994, 08, 05));
+
+
+
+// Otro
+Console.WriteLine(socio1.Dni);
+Console.WriteLine(socio1.Nombre);
+Console.WriteLine(socio1.Apellido);
+Console.WriteLine(socio1.Direccion);
+Console.WriteLine(socio1.Telefono);
+Console.WriteLine(socio1.Email);
+Console.WriteLine(socio1.Categoria);
+Console.WriteLine(socio1.EstaActivo);
+Console.WriteLine(socio1.FechaDeNacimiento);
+Console.WriteLine(socio1.FechaDeRegistro);
+
+
+
+
+
+
+
