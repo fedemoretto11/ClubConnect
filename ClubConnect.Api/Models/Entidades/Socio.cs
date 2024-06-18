@@ -1,10 +1,11 @@
-﻿using static ClubConnect.Api.Models.Enum.Enum;
+﻿using System.ComponentModel.DataAnnotations;
+using static ClubConnect.Api.Models.Enum.Enum;
 
 namespace ClubConnect.Api.Models.Entidades
 {
 	public class Socio
 	{
-		#region Propiedades publicas
+		#region Propiedades privadas
 		private int id { get; set; }
 		private int dni { get; set; }
 		private string nombre { get; set; }
@@ -17,10 +18,12 @@ namespace ClubConnect.Api.Models.Entidades
 		private DateTime fechaDeNacimiento { get; set; }
 		private DateTime fechaDeRegistro { get; set; }
 
-		#endregion
+        #endregion
 
-		#region Propiedades publicas
-		public int Id
+        #region Propiedades publicas
+
+        [Display(Name = "N° Socio")]
+        public int Id
 		{
 			get { return id; }
 			set { id = value; }
@@ -60,17 +63,22 @@ namespace ClubConnect.Api.Models.Entidades
 			get { return categoria; }
 			set { categoria = value; }
 		}
-		public EstaActivo EstaActivo
+        [Display(Name = "Esta Activo")]
+        public EstaActivo EstaActivo
 		{
 			get { return estaActivo; }
 			set { estaActivo = value; }
 		}
-		public DateTime FechaDeNacimiento
+        [Display(Name = "Fecha de Nacimiento")]
+        [DataType(DataType.Date)]
+        public DateTime FechaDeNacimiento
 		{
 			get { return fechaDeNacimiento; }
 			set { fechaDeNacimiento = value; }
 		}
-		public DateTime FechaDeRegistro
+        [Display(Name = "Fecha de Registro")]
+        [DataType(DataType.Date)]
+        public DateTime FechaDeRegistro
 		{
 			get { return fechaDeRegistro; }
 			set { fechaDeRegistro = value; }

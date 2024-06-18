@@ -17,8 +17,8 @@
 
 		public enum EstadoDeuda
 		{
-			AL_DIA,
-			DEBE
+			NO_DEBE,
+			SI_DEBE
 		}
 
 	}
