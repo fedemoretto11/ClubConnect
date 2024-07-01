@@ -1,10 +1,10 @@
 ﻿@model ClubConnect.Api.Models.Entidades.Socio
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar";
 }
 
-<h1>Edit</h1>
+<h1>Editar</h1>
 
 <h4>Socio</h4>
 <hr />
@@ -45,12 +45,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="Categoria" class="control-label"></label>
-                <select asp-for="Categoria" class="form-control" asp-items="Html.GetEnumSelectList<ClubConnect.Api.Models.Enum.Enum.CategoriaSocio>()"></select>
+                <select asp-for="Categoria" class="form-control" asp-items="Html.GetEnumSelectList<ClubConnect.Api.Models.Enum.SociosEnum.CategoriaSocio>()"></select>
                 <span asp-validation-for="Categoria" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="EstaActivo" class="control-label"></label>
-                <select asp-for="EstaActivo" class="form-control" asp-items="Html.GetEnumSelectList<ClubConnect.Api.Models.Enum.Enum.EstaActivo>()"></select>
+                <select asp-for="EstaActivo" class="form-control" asp-items="Html.GetEnumSelectList<ClubConnect.Api.Models.Enum.SociosEnum.EstaActivo>()"></select>
                 <span asp-validation-for="EstaActivo" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -64,14 +64,14 @@
                 <span asp-validation-for="FechaDeRegistro" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Save" class="mt-2 btn btn-primary"/>
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="mt-2 btn btn-outline-primary btn-sm">Back to List</a>
 </div>
 
 @section Scripts {

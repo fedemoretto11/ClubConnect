@@ -3,7 +3,7 @@ using System.Security;
 using ClubConnect.Api.Models.Data;
 using ClubConnect.Api.Models.Entidades;
 using ClubConnect.Api.Models.Servicios;
-using static ClubConnect.Api.Models.Enum.Enum; 
+using static ClubConnect.Api.Models.Enum.SociosEnum; 
 
 SocioServicio socioServicio = new();
 

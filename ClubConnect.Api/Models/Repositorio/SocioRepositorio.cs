@@ -3,7 +3,7 @@ using ClubConnect.Api.Models.Data;
 using ClubConnect.Api.Models.Entidades;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using static ClubConnect.Api.Models.Enum.Enum;
+using static ClubConnect.Api.Models.Enum.SociosEnum;
 
 namespace ClubConnect.Api.Models.Repositorio
 {

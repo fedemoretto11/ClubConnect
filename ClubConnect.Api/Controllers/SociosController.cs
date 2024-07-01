@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ClubConnect.Api.Models.Data;
 using ClubConnect.Api.Models.Entidades;
+using ClubConnect.Api.Models.Enum;
+using ClubConnect.Api.Reglas;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.View;
 
 namespace ClubConnect.Api.Controllers
@@ -75,7 +77,8 @@ namespace ClubConnect.Api.Controllers
         public IActionResult Create()
         {
             var socio = new Socio();
-            socio.FechaDeRegistro = DateTime.Now;
+            socio.FechaDeNacimiento = new DateTime(1990, 1, 1);
+            
             
         
             return View(socio);
@@ -86,20 +89,45 @@ namespace ClubConnect.Api.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Dni,Nombre,Apellido,Direccion,Telefono,Email,Categoria,EstaActivo,FechaDeNacimiento,FechaDeRegistro")] Socio socio)
+        public async Task<IActionResult> Create([Bind("Id,Dni,Nombre,Apellido,Direccion,Telefono,Email,Categoria,FechaDeNacimiento")] Socio socio)
         {
-            
+
             if (ModelState.IsValid)
             {
+                // Ver porque no funciona
+                //var socioExistente = await RNSocio.BuscarSocio(_context, socio.Id);
                 var socioExistente = await _context.Socios.FirstOrDefaultAsync(s => s.Dni == socio.Dni || s.Email == socio.Email);
                 if (socioExistente != null)
                 {
-                    ModelState.AddModelError(string.Empty, "Ya existe un socio con el mismo Dni o Email.");
+                    if (socioExistente.EstaActivo == SociosEnum.EstaActivo.SI)
+                    {
+                        ModelState.AddModelError(string.Empty, "Ya existe un socio con el mismo Dni o Email.");
+                    }
+                    if (socioExistente.EstaActivo == SociosEnum.EstaActivo.NO)
+                    {
+                        ModelState.AddModelError(string.Empty, "Ya existe un socio dado de baja con el mismo Dni o Email.");
+                    }
                     return View(socio);
                 }
-                _context.Add(socio);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                socio.FechaDeRegistro = DateTime.Now;
+                socio.EstaActivo = SociosEnum.EstaActivo.SI;
+                
+
+                try
+                {
+                    _context.Add(socio);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+
+                }
+                catch (DbUpdateException ex)
+                {
+                    ModelState.AddModelError(string.Empty, "Ocurrió un error al guardar los datos en la base de datos.");
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError(string.Empty, "Ocurrió un error inesperado.");
+                }
             }
             return View(socio);
         }
@@ -188,7 +216,7 @@ namespace ClubConnect.Api.Controllers
                 // Da de baja no elimina
 
                 //_context.Socios.Remove(socio);
-                socio.EstaActivo = Models.Enum.Enum.EstaActivo.NO;
+                socio.EstaActivo = Models.Enum.SociosEnum.EstaActivo.NO;
             }
             
             await _context.SaveChangesAsync();

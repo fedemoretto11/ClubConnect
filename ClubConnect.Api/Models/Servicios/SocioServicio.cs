@@ -1,5 +1,5 @@
 ﻿using ClubConnect.Api.Models.Entidades;
-using static ClubConnect.Api.Models.Enum.Enum;
+using static ClubConnect.Api.Models.Enum.SociosEnum;
 
 namespace ClubConnect.Api.Models.Servicios
 {

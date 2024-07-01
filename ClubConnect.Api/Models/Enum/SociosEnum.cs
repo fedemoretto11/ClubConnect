@@ -1,6 +1,6 @@
 ﻿namespace ClubConnect.Api.Models.Enum
 {
-	public class Enum
+	public class SociosEnum
 	{
 		public enum CategoriaSocio
 		{
@@ -13,12 +13,6 @@
 		{ 
 			SI,
 			NO
-		}
-
-		public enum EstadoDeuda
-		{
-			NO_DEBE,
-			SI_DEBE
 		}
 
 	}
